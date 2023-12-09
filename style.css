@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    place-items: center ;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    border: 25px;
+
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #272525;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #363333;
+}
+
+body {
+    background-color: #191e30;
+}
+
+.wrapper {
+    width: 600px;
+    background-color: #151927;
+    border-radius: 5px;
+    border: 1px solid #1d1d20;
+    border-top: 0px;
+}
+
+.wrapper .title {
+    background-color: #151927;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500px;
+    line-height: 90px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.wrapper .form {
+    padding: 20px 15px;
+    min-height: 700px;
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.wrapper .form .inbox {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+.wrapper .form .user-inbox {
+    justify-content: flex-end;
+    margin: 13px 0;
+}
+
+.wrapper .form .inbox .icon {
+    height: 58px;
+    width: 58px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-size: 22px;
+    background-color: #1538f6;
+}
+
+.wrapper .form .inbox .msg-header {
+    max-width: 53%;
+    margin-left: 10px;
+}
+
+.form .inbox .msg-header p {
+    color: #fff;
+    background: linear-gradient(90deg,#4e66f7, #1538f6);
+    border-radius: 10px;
+    padding: 8px 10px;
+    font-size: 18px;
+}
+.form .user-inbox .msg-header p {
+    color: #fff;
+    background: #2c2f3f;
+}
+
+.wrapper .typing-field {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #151927;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.wrapper .typing-field .input-data {
+    height: 50px;
+    width: 400px;
+    position: relative;
+}
+.wrapper .typing-field .input-data input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    padding: 0 100px 0 18px;
+    border-radius: 3px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #0d1223;
+    transition: .2 ease-in;
+}
+
+.input-data input::placeholder {
+    color: #999999;
+    transition: 0.2 ease-in;
+}
+.typing-field .input-data input:focus {
+    border-color: #1538f6;
+}
+
+.input-data input:focus::placeholder  {
+    color: #bfbfbf;
+}
+.wrapper .typing-field .input-data button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    height: 35px;
+    width: 70px;
+    background-color: #1538f6;
+    color: #fff;
+    border-radius: 3px;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #1538f6;
+    transform: translateY(-50%);
+    transition: .2s ease-in-out;
+}
+
+.wrapper .typing-field .input-data input:valid ~ button {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.typing-field .input-data button:hover {
+    background-color: #4e66f7;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+footer p {
+    color: #eee;
+    opacity: .4;
+    cursor: default;
+    margin-right: 4px;
+}
+
+.bot-inbox {
+    animation: showMessage .7s ease-in-out;
+}
+
+@keyframes showMessage {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);    
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
